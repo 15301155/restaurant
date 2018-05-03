@@ -42,7 +42,7 @@ public class SearchController {
 	
 	
 	@RequestMapping(value="/single",method=RequestMethod.POST)
-	private String search(java.lang.String search,HttpServletResponse response) throws IOException{	
+	private String search(java.lang.String search,HttpServletResponse response,Model model) throws IOException{	
 		logger.debug(search+"1234563633333333333333333333333333333333333333333333333333333333333333");  
 		
 		Search searchEnty =searchmapper.selectbyname(search);
@@ -52,13 +52,16 @@ public class SearchController {
 		if(null == searchEnty){
 			 response.setCharacterEncoding("utf-8");
 			 PrintWriter out = response.getWriter();
-			 out.print("<script>alert('Fail'); window.location='http://localhost:8080/ssm/pages/index.jsp' </script>");
+			 out.print("<script>alert('Search failed, please try again.'); window.location='http://localhost:8080/ssm/pages/index.jsp' </script>");
 			 out.flush();
 			 out.close();
 			return "index";
 		}
+		model.addAttribute("user",searchEnty);
+        return "single";
 		
-		return "single";		 
+		
+		
 	}
 	
 
