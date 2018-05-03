@@ -39,7 +39,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
             
 			<div class="login_form">
-				<form action="<%=basePath%>login/index" name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" method="post"><input type="hidden" name="did" value="0"/>
+				<form action="<%=basePath%>login/index" name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" method="post">
+				<input type="hidden" name="did" value="0"/>
                <input type="hidden" name="to" value="log"/>
                
                <div class="loginHint" id="loginHint">${param.result}</div>

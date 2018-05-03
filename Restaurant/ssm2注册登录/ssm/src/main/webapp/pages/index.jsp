@@ -47,15 +47,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 <span class="menu"></span> 
 					<ul class="navig">
 						<li><a href="index.jsp">主页</a></li>
-						<li><a href="about.html" class="active" >关于</a></li>
+						<li><a href="about.jsp" class="active" >关于</a></li>
 						
 						
 					</ul>
 			</div>
 			<div class="header-right">
 				<div class="search-bar">
-					<input type="text" value="吃点什么" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '吃点什么';}">
+				
+				
+				
+				<form action="<%=basePath%>/index/single" method="post" enctype="multipart/form-data">
+					<input type="text" name="search" value="吃点什么" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '吃点什么';}">
 					<input type="submit" value="">
+					
+					</form>
+					
 				</div>
 				<ul>
 					

@@ -41,10 +41,9 @@ public class LoginController {
 		person.setMail(email);	
 		boolean isAc = this.personService.activatEmail(person);		
 
-		if(isAc){//激活成功，3秒跳转
+		if(isAc){//激活成功，5秒跳转
 			return "activateCode";
 		}else{
-			//激活失败页面
 			 return "activateCode";	
 		}
 		  	 
@@ -61,6 +60,8 @@ public class LoginController {
 		 logger.debug("ws-----login----result="+result); 
 	   return "redirect:/user/login";		 
 	}
+	
+	
 	
 
 }
