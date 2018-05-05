@@ -57,7 +57,8 @@ public class SearchController {
 			 out.close();
 			return "index";
 		}
-		model.addAttribute("user",searchEnty);
+		model.addAttribute("name",searchEnty.getname());
+		model.addAttribute("id",searchEnty.getid());
         return "single";
 		
 		
