@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cn.hnust.been.Person;
+import com.cn.hnust.been.Search;
+import com.cn.hnust.dao.SearchMapper;
 import com.cn.hnust.servic.IPersonService;
 import com.lava.core.utils.ResponseUtils;
 
@@ -22,6 +24,8 @@ public class LoginController {
 	private static Logger logger = Logger.getLogger(LoginController.class); 
 	@Resource
 	private IPersonService personService;
+	@Resource
+	private SearchMapper searchmapper;
 	
 	@RequestMapping("/person")
 	@ResponseBody
@@ -50,7 +54,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping("/index")	
-	private String login(Person person,ModelMap modelMap){	
+	private String login(Person person,ModelMap modelMap,Model model){	
 		 logger.debug("ws-----activatemail----person.getPassword();="+person.getPassword()+" email="+person.getMail());   
 		String result = this.personService.loginPerson(person);
 		if(result.equals("µÇÂ½³É¹¦")){

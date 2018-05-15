@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="sf"  uri="http://www.springframework.org/tags/form"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -104,15 +105,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-8 about-left">
 					<div class="about-one">
 						<p>Find The Most</p>
-						<h3>Coffee of the month</h3>
+						<h3>Happy of the month</h3>
 					</div>
 					<div class="about-two">
-						<a href="single.html"><img src="<%=path%>/images/c-1.jpg" alt="" /></a>
+					
+						<a href="single.jsp"><img src="<%=path%>/images/c-1.jpg" alt="" /></a>
 						<p>Posted by <a href="#">Johnson</a> on 10 feb, 2015 <a href="#">comments(2)</a></p>
 						<p>Phasellus fringilla enim nibh, ac pharetra nulla vestibulum ac. Donec tempor fermentum felis, non placerat sem ultrices ut. Nam molestie nunc nec felis hendrerit, in pulvinar arcu mollis. Quisque eget purus nec velit venenatis tincidunt vitae ac massa. Proin vel ornare tellus. Duis consectetur gravida tellus ut varius. Aenean tellus massa, laoreet ut euismod et, pretium id ex. Mauris hendrerit suscipit hendrerit.</p>
 						<p>Quisque ultrices ligula a nisl porttitor, vitae porta tortor eleifend. Nulla nec imperdiet ipsum, ut cursus mauris. Proin ut sodales sem, quis vestibulum libero. Proin tempor venenatis congue. Phasellus mollis massa sit amet pharetra consequat. Aliquam quis lacus at sapien tempor semper. Sed ultrices et metus et elementum. Nunc sed justo at erat consequat mollis et eu lectus.</p>
 						<div class="about-btn">
-							<a href="single.html">Read More</a>
+							<a href="single.jsp">Read More</a>
 						</div>
 						<ul>
 							<li><p>Share : </p></li>
